@@ -26,8 +26,8 @@ function App() {
         <h1>Team Member</h1>
         
 
-        <Form addTeam={addTeamHandler}/>
-
+        <Form addMember={addTeamHandler}/>
+        <Team notes={memberState}/>
 
 
 

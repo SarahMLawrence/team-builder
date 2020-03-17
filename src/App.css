@@ -7,6 +7,21 @@
   pointer-events: none;
 }
 
+.team-list{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.note {
+  background: grey;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12), 0 5px 2px rgba(0, 0, 0, 0.24);
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  margin: 16px auto;
+  text-align: left;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

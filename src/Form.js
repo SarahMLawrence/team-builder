@@ -3,27 +3,58 @@ import React, { useState } from "react";
 
 const Form = props => {
 
-    const [formState, setFormState] = useState({
-        name: "",
-        email: "",
-        role: ""
+  // const [titleState, setTitleState] = useState("");
+
+  // const [bodyState, setBodyState] = useState("");
+
+  const [formState, setFormState] = useState({
+    name: "",
+    email: "",
+    role: ""
+  });
+  console.log(formState);
+  // const titleChange = event => {
+  //   setTitleState(event.target.value);
+  // };
+
+  // const bodyChange = event => {
+  //   setBodyState(event.target.value);
+  // };
+
+  const changeHandler = event => {
+    setFormState({
+      ...formState,
+      [event.target.name]: event.target.value
+    });
+  };
+
+  const formSubmitHandler = event => {
+    event.preventDefault();
+
+    props.addNote({
+      ...formState,
+      id: Date.now()
     });
 
-    console.log(formState);
+    /*I added this after class, 
+    but it simply clears the user data and resets the form!*/
+    setFormState({
+      name: "",
+      email: "",
+      role: ""
+    });
+  };
 
-
-
-    const submitHandler = event => {
-        event.preventDefault();
-    }
 
     return (
-        <form>
+        <form onSubmit={formSubmitHandler}>
             <label htmlFor="name">Name: </label>
             <input
                 type="text"
                 name="name"
-
+                value={formState.name}
+                onChange={changeHandler}
+                placeholder="Enter your Name!"
 
             />
 
