@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
-import './App.css';
+import './App.css'
 
-import background from '../src/assets/background.jpg';
+import background from './background.png'
 
 import MemberForm from './components/MemberForm';
 import Member from './components/Member';
@@ -27,7 +27,7 @@ function App() {
 
   
   return (
-    <div className="App"  >
+    <div className="App" styles={{ backgroundImage: `url(${background})`}} >
       <MemberForm addMember={addMemberHandler} />
       <Member members={memberState}/>
     </div>
