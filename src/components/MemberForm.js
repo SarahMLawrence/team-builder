@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 
+import { FormGroup, Label, Input } from "../components/Styles";
+
+
 const MemberForm = props => {
 
     const [formState, setFormState] = useState({
@@ -33,19 +36,18 @@ const MemberForm = props => {
     return (
 
         <form onSubmit={formSubmitHandler}>
-            <div className="title">
-                <h1>Team Builder</h1>
-            </div>
-            <label htmlFor="name"></label>
-            <input
+            <Label htmlFor="name">Name: </Label>
+            <Input
                 type="text"
                 name="name"
                 value={formState.name}
                 onChange={changeHandler}
                 placeholder="Full Name (Required)"
             />
-            <label htmlFor="email"></label>
-            <input
+
+
+            <Label htmlFor="email">Email: </Label>
+            <Input
                 type="text"
                 name="email"
                 id="input-id"
@@ -53,19 +55,22 @@ const MemberForm = props => {
                 onChange={changeHandler}
                 placeholder="Email"
             />
-            <label htmlFor="role"></label>
-            <input
+            <Label htmlFor="role">Role: </Label>
+            <Input
                 type="text"
                 name="role"
                 placeholder="Role"
                 value={formState.role}
                 onChange={changeHandler}
             />
-            <button type="submit">Add Team Member!</button>
+
+            <button type="submit">Add</button>
         </form>
+
     )
+
 
 
 }
 
-export default MemberForm
+export default MemberForm;
