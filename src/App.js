@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import './App.css';
 
+import background from '../src/assets/background.jpg';
+
 import MemberForm from './components/MemberForm';
 import Member from './components/Member';
 
@@ -11,7 +13,7 @@ function App() {
     {
       id: "1",
       name: "Sarah Lawrence",
-      email: "sarahlawrence1152@gmail.com",
+      email: "sarah@gmail.com",
       role: "Full Stack Web Developer"
       
     }
@@ -25,7 +27,7 @@ function App() {
 
   
   return (
-    <div className="App">
+    <div className="App"  >
       <MemberForm addMember={addMemberHandler} />
       <Member members={memberState}/>
     </div>
