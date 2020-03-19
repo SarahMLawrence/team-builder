@@ -57,3 +57,31 @@ input {
     transform: rotate(360deg);
   }
 }
+
+.memberForm{
+  background-color: white;
+  width: 30%;
+  border: solid black 2px;
+  margin: 8px;
+  margin-left: 35%;
+}
+
+select {
+
+  margin-left: 42%;
+
+}
+
+.editBtn {
+  border-radius: 20px;
+  width: 30%;
+  height: 20%;
+  background-color: pink;
+  margin: 8%;
+
+  
+}
+
+.editBtn:hover{
+  background-color: blueviolet;
+}

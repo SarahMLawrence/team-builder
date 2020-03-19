@@ -1,10 +1,8 @@
 import React, {useState} from 'react';
 import './App.css'
 
-import MemberForm from './components/MemberForm';
 import Member from './components/Member';
-
-
+import MemberForm from './components/MemberForm';
 
 function App() {
 
@@ -15,14 +13,32 @@ function App() {
       email: "sarah@gmail.com",
       role: "Full Stack Web Developer"
       
-    }
+    },
+
+    {
+      id: "2",
+      name: "Jay Vaughn",
+      email: "jay@gmail.com",
+      role: "IBM iSeries Developer"
+      
+    },
+
+    {
+      id: "3",
+      name: "Coronavirus",
+      email: "corona@gmail.com",
+      role: "Virus Devloper"
+      
+    },
+
+
+
   ]);
 
   const addMemberHandler = newMember => {
     console.log("adding member", newMember);
     setMemberState([...memberState, newMember]);
   };
-
 
   
   return (
@@ -31,7 +47,6 @@ function App() {
 
 <MemberForm addMember={addMemberHandler}/>
 <Member members={memberState}/>
-
 
 </div>
 
